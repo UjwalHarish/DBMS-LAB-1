@@ -1,0 +1,43 @@
+create database food_delivery;
+use food_delivery;
+
+create table visitor(
+customer_id varchar(8) primary key,
+phno char(10),
+name varchar(10),
+addr varchar(20));
+drop table visitor;
+
+create table orders(
+orderno char(6) primary key,
+time_of_placing time);
+
+create table meal(
+mealname varchar(10) primary key,
+type char(10),
+price int,
+quantity int);
+
+create table receptionist(
+r_id char(6) primary key,
+r_name char(10),
+orderno char(6),
+foreign key(orderno) references orders(orderno));
+
+create table driver(
+did char(6) primary key,
+dname char(10),
+milage_charge int,
+rating int);
+
+create table fast_food_outlets(
+fname char(10) primary key,
+loc char(10),
+mealname varchar(10),
+foreign key(mealname) references meal(mealname));
+
+create table on_duty(
+did char(6),
+dname char(10),
+foreign key(did) references driver(did),
+foreign key(dname) references driver(dname));
