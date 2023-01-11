@@ -41,3 +41,42 @@ did char(6),
 dname char(10),
 foreign key(did) references driver(did),
 foreign key(dname) references driver(dname));
+
+insert into visitor values('a1','123','anish','konankunte');
+insert into visitor values('a2','321','mohan','shivajinagar');
+insert into visitor values('a3','132','vinit','jaynagar');
+insert into visitor values('a4','456','vidan','btm');
+insert into visitor values('a5','789','vimal','kengeri');
+select * from visitor;
+
+insert into orders values('o1','1800');
+insert into orders values('o2','1900');
+insert into orders values('o3','2000');
+insert into orders values('o4','2100');
+insert into orders values('o5','1500');
+
+insert into meal values('amburdum','biryani',150,2);
+insert into meal values('magerita','pizza',250,1);
+insert into meal values('roti naan','roti',160,2);
+insert into meal values('idli','idli',80,2);
+insert into meal values('kalmi','chicken',300,2);
+
+insert into receptionist values('r1','jogi','o1');
+insert into receptionist values('r2','jagan','o2');
+insert into receptionist values('r3','jeevan','o3');
+insert into receptionist values('r4','jevith','o4');
+insert into receptionist values('r5','jish','o4');
+
+insert into driver values('d1','faran',30,1);
+insert into driver values('d2','faizan',50,2);
+insert into driver values('d3','fueller',60,3);
+insert into driver values('d4','jon',70,4);
+insert into driver values('d5','joshan',80,5);
+
+insert into fast_food_outlets values('a2b','btm','amburdum');
+insert into fast_food_outlets values('domino','konankunte','margerita');
+insert into fast_food_outlets values('upahar','jaynagar','roti naan');
+insert into fast_food_outlets values('thindi','btm','idli');
+insert into fast_food_outlets values('ramanna','kengeri','kalmi');
+drop table fast_food_outlets;
+
