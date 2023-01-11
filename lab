@@ -80,3 +80,18 @@ insert into fast_food_outlets values('thindi','btm','idli');
 insert into fast_food_outlets values('ramanna','kengeri','kalmi');
 drop table fast_food_outlets;
 
+select dname
+from driver d
+where noorders=8;
+
+create view v2 as
+select mealname , rating
+from meal
+where mealname='kalmi' and rating=5;
+select * from v2;
+drop table v1;
+
+update meal
+set price=90
+where rating<4 and quantity<2;
+select * from meal;
